@@ -17,5 +17,10 @@ pipeline {
                 echo "building the docker image"
             }
         }
+        stage('kube') {
+            steps {
+                echo "deploying the k8s"
+            }
+        }
     }
 }
