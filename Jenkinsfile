@@ -7,6 +7,11 @@ pipeline {
                 echo "welcome to my first pipeline"
             }
         }
+        stage('test') {
+            steps{
+                echo "testing the pipeline"
+            }
+        }
         stage('sonar') {
             steps {
                 echo "scanning the code"
