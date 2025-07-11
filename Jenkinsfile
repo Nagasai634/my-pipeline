@@ -3,7 +3,7 @@ pipeline {
         label 'jenkins-slave'  
     }
     tools {
-        jdk 'jdk'             
+        jdk 'Jdk-21'             
         maven 'maven'
     }         
     stages {
