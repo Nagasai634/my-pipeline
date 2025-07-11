@@ -1,26 +1,16 @@
 pipeline {
-    agent any
-
+    agent {
+        label 'jenkins-slave'  
+    }
+    tools {
+        jdk 'jdk'             
+        maven 'maven'
+    }         
     stages {
-        stage('build') {
-            steps{
-                echo "welcome to my first pipeline"
-            }
-        }
-        stage('sonar') {
+        stage('Build') {
             steps {
-                echo "scanning the code"
-            }
-        }
-        stage('docker') {
-            steps {
-                echo "building the docker image"
-            }
-        }
-        stage('kube') {
-            steps {
-                echo "deploying the k8s"
-            }
+                sh "mvn clean package"
+            }                    
         }
     }
 }
