@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "mvn clean package"
+                dir('/home/nagasaivardhan724/sample-maven'){
+                  sh "mvn clean package"
+                }
             }                    
         }
     }
