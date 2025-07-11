@@ -9,9 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('/home/nagasaivardhan724/spring-petclinic'){
-                  sh "mvn clean package"
-                }
+               sh "mvn clean"
             }                    
         }
     }
